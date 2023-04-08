@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <p>Calculator</p>
+
+    <div class="container">
+        <div class="row1">
+            <button onclick="calculatorOpera('one')">1</button>
+            <button onclick="calculatorOpera('two')">2</button>
+            <button onclick="calculatorOpera('three')">3</button>
+            <button onclick="calculatorOpera('plus')">+</button>
+        </div>
+        <div class="row2">
+            <button onclick="calculatorOpera('four')">4</button>
+            <button onclick="calculatorOpera('five')">5</button>
+            <button onclick="calculatorOpera('six')">6</button>
+            <button onclick="calculatorOpera('minus')">-</button>
+        </div>
+        <div class="row3">
+            <button onclick="calculatorOpera('seven')">7</button>
+            <button onclick="calculatorOpera('eight')">8</button>
+            <button onclick="calculatorOpera('nine')">9</button>
+            <button onclick="calculatorOpera('mul')">*</button>
+        </div>
+        <div class="row4">
+            <button onclick="calculatorOpera('zero')">0</button>
+            <button onclick="calculatorOpera('point')">.</button>
+            <button onclick="calculatorOpera('equal')">=</button>
+            <button onclick="calculatorOpera('division')">/</button>
+        </div>
+        <button id="clear" onclick="calculatorOpera('clear')">clear</button>
+    </div>
+    <script src="./code.js"></script>
+</body>
+</html>
