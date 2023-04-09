@@ -1,139 +1,157 @@
-let variableCal = '', number1 = '', number2 = '', resul = 0;
+let operationStr = '', number1 = '', number2 = '', resul = 0;
 
 function calculatorOpera(btn){
-    
+   
     switch(btn){
         case 'one':
-            variableCal += '1';
-            console.log(variableCal);
+            operationStr += '1';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr); 
             break;
 
+
         case 'two':
-            variableCal += '2';
-            console.log(variableCal);
+            operationStr += '2';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'three':
-            variableCal += '3';
-            console.log(variableCal);
+            operationStr += '3';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break; 
 
         case 'four':
-            variableCal += '4';
-            console.log(variableCal);
+            operationStr += '4';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'five':
-            variableCal += '5';
-            console.log(variableCal);
+            operationStr += '5';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
             
         case 'six':
-            variableCal += '6';
-            console.log(variableCal);
+            operationStr += '6';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
         
         case 'seven':
-            variableCal += '7';
-            console.log(variableCal);
+            operationStr += '7';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'eight':
-            variableCal += '8';
-            console.log(variableCal);
+            operationStr += '8';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'nine':
-            variableCal += '9';
-            console.log(variableCal);
+            operationStr += '9';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
             
         case 'zero':
-            variableCal += '0';
-            console.log(variableCal);
+            operationStr += '0';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'plus':
-             number1 = variableCal;
-             variableCal += ' + ';
-             console.log(variableCal);
+             number1 = operationStr;
+             operationStr += ' + ';
+             document.getElementById('displayNumber').innerHTML = operationStr;
+             console.log(operationStr);
             break;
 
         case 'minus':
-            number1 = variableCal;
-            variableCal += ' - ';
-            console.log(variableCal);
+            number1 = operationStr;
+            operationStr += ' - ';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break; 
         
         case 'mul':
-            number1 = variableCal;
-            variableCal += ' * ';
-            console.log(variableCal);
+            number1 = operationStr;
+            operationStr += ' * ';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'division':
-            variableCal += ' / ';
-            console.log(variableCal);
+            operationStr += ' / ';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
         case 'point':
-            number1 = variableCal;
-            variableCal += '.';
-            console.log(variableCal);
+            number1 = operationStr;
+            operationStr += '.';
+            document.getElementById('displayNumber').innerHTML = operationStr;
+            console.log(operationStr);
             break;
 
         case 'equal':
             arithOperations();
             break;
             
-
         case 'clear':
-            variableCal = '';
+            operationStr = '';
+            document.getElementById('displayNumber').innerHTML = '0';
             console.log('cleared');
             break;
        
     }
+  
+}
 
-    function arithOperations(){
-        number1 = variableCal.split(' ')
-        number2 = variableCal.split(' ');
+function arithOperations(){
+    number1 = operationStr.split(' ')
+    number2 = operationStr.split(' ');
 
-        
-        
-        let i = 1, strNumber = 0;
+    
+    
+    let i = 1, strNumber = 0;
 
-        for (; i < number2.length; i++){
-           // console.log(number2[i]);
+    for (; i < number2.length; i++){
+       // console.log(number2[i]);
 
-            if(number2[i] !== '+' && number2[i] !== '-' && 
-                number2[i] !== '*' && number2[i] !== '/'){
-                strNumber = (number2[i] * 1);
-            }
+        if(number2[i] !== '+' && number2[i] !== '-' && 
+            number2[i] !== '*' && number2[i] !== '/'){
+            strNumber = (number2[i] * 1);
         }
-       
+    }
+   
 
-        switch(number2[1]){
-            case '+':
-                resul =  number1[0] * 1 + strNumber;
-                break;
+    switch(number2[1]){
+        case '+':
+            resul =  number1[0] * 1 + strNumber;
+            break;
 
-            case '-':
-                resul =  number1[0] * 1 - strNumber;
-                break;
+        case '-':
+            resul =  number1[0] * 1 - strNumber;
+            break;
 
-            case '*':
-                resul =  number1[0] * 1 * strNumber;
-                break;
+        case '*':
+            resul =  number1[0] * 1 * strNumber;
+            break;
 
-                
-            case '/':
-                resul =  number1[0]  * 1 / strNumber;
-                break;
-        }
-
-            
-        variableCal = resul.toString();
-        
-        console.log(resul);
+        case '/':
+            resul =  number1[0]  * 1 / strNumber;
+            break;
     }
 
+        
+    operationStr = resul.toString();
+    document.getElementById('displayNumber').innerHTML = resul;
+    console.log(resul);
 }
+
+let count = 0;
+

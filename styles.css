@@ -1,5 +1,52 @@
+body{
+    height: 95vh;
+    display: flex;
+    /*center horizontal*/
+    justify-content: center;
 
-.row2, .row3, .row4, #clear{
-    margin-top: 15px;
-    
+    /*center vertical*/
+    align-items: center;
+}
+
+.container{
+    background-color: black;
+    padding: 12px;
+    padding-top: 30px;
+    border-radius: 15px;
+}
+
+button{
+    background-color: rgb(59, 58, 58);
+    font-size: 25px;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 100px;
+    margin: 5px;
+    padding: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#clear{
+    font-size: 15px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#plus, #minus, #mul, #division{
+    background-color: rgb(245, 167, 12);
+}   
+
+#displayNumber{
+    margin: 0;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 50px;
+    font-weight: normal;
+    color: white;
+    text-align: right;
 }
